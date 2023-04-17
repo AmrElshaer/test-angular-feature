@@ -1,0 +1,33 @@
+<form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name:
+        <input type="text" formControlName="name" required />
+    </label>
+    <br />
+    <label>
+        Street:
+        <input type="text" formControlName="street" required />
+    </label>
+    <br />
+    <label>
+        City:
+        <input type="text" formControlName="city" required />
+    </label>
+    <br />
+    <label>
+        Postcode:
+        <input type="text" formControlName="postcode" required />
+    </label>
+    <br />
+    <label>
+        Country:
+        <input type="text" formControlName="country" required />
+    </label>
+    <br />
+    <label>
+        Phone:
+        <input type="tel" formControlName="phone" required />
+    </label>
+    <br />
+    <button type="submit" [disabled]="!authorForm.valid">Update</button>
+</form>

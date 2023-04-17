@@ -1,0 +1,10 @@
+<div><a routerLink="create">New Author</a></div>
+<div *ngFor="let item of authorsList$ | async">
+    <h1>{{item.name}}</h1>
+    <p>{{item.street}}</p>
+    <p>{{item.city}}</p>
+    <p>{{item.postcode}}</p>
+    <p>{{item.country}}</p>
+    <p>{{item.phone}}</p>
+    <a [routerLink]="['edit', item.id]">Edit Author</a>
+</div>
